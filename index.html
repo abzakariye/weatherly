@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App - Home</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .gallery-item {
+        flex: 1 1 calc(25% - 20px);
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .gallery-item {
+          flex: 1 1 calc(50% - 20px);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-item {
+          flex: 1 1 100%;
+        }
+      }
+
+      /* Clearfix */
+      .gallery::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body style="height: 170vh">
+    <header>
+      <h1>Weatherly</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!--weather secton-->
+      <section class="weather-section">
+        <h2>Check the Weather in Your City</h2>
+        <form action="#" class="weather-form">
+          <label for="city">City:</label>
+          <input type="text" id="cityInput" name="city" required />
+
+          <button type="submit">Get Weather</button>
+        </form>
+        <div class="weatherDisplayCard" style="display: none"></div>
+      </section>
+
+      <!--gallery-->
+      <section class="gallery">
+        <div class="gallery-item">
+          <img src="./images/snow.jpg" alt="Image 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="./images/rain.jpg" alt="Image 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="./images/sunny.jpg" alt="Image 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="./images/wave.jpg" alt="Image 5" />
+        </div>
+      </section>
+
+      <!--weather form-->
+      <section class="weather-table">
+        <h2>Main Cities Weather Forecast</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>City</th>
+              <th>Temperature (°F)</th>
+              <th>Humidity (%)</th>
+              <th>Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>New York</td>
+              <td>22</td>
+              <td>60</td>
+              <td>Sunny</td>
+            </tr>
+            <tr>
+              <td>Los Angeles</td>
+              <td>25</td>
+              <td>50</td>
+              <td>Cloudy</td>
+            </tr>
+            <tr>
+              <td>Chicago</td>
+              <td>18</td>
+              <td>70</td>
+              <td>Rainy</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Weather App</p>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
